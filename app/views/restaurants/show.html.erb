@@ -1,0 +1,18 @@
+<h2><%= @restaurant.name %></h2>
+<p><%= @restaurant.address %></p>
+<p><%# @restaurant.rating %></p>
+
+<% link_to "See details", restaurant_path(@restaurant), class: "btn btn-primary"%>
+
+<%# create back link that links to the index page %>
+<%# render/create a form to create a new review %>
+
+
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
+<br>
+
